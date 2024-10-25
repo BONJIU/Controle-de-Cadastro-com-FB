@@ -43,8 +43,8 @@
             <p class="text-start fs-6">Sistema Utilizado para agendamento de serviços.</p>
             <p>
                 {{#each posts}}
-                        <form action="/excluir" method="POST">
-                        <input type="hidden" name="id" value="{{this.id}}">
+                        <form action="/excluir/:id" method="POST">
+                        <input type="hidden" name="id" value="{{id}}">
                             <div class="mb-3 text-start">
                                 <label class="form-label">Nome:</label>
                                 <input type="name" name="nome" class="form-control" id="nome" value="{{nome}}">
@@ -70,7 +70,8 @@
                                 <textarea name="observacao" class="form-control" placeholder="" id="observacao" style="height: 100px">{{observacao}}</textarea>
                             </div>
                             <div class="mb-3 text-start">
-                                <button type="submit" class="btn btn-primary">Deseja Excluir?</button>
+                                <a href="/excluir/{{id}}" class="btn btn-danger">Excluir</a>
+                            </div>
                             </div>
                         </form>     
                 {{/each}}

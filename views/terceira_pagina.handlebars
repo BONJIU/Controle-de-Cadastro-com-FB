@@ -43,7 +43,8 @@
             <p class="text-start fs-6">Sistema Utilizado para agendamento de serviços.</p>
             <p>
                 {{#each posts}}
-                    <form action="/atualizar/{{id}}" method="POST">
+                    <form action="/atualizar" method="POST">
+                       <input type="hidden" name="id" value="{{id}}">
                         <div class="mb-3 text-start">
                             <label class="form-label">Nome:</label>
                             <input type="name" name="nome" class="form-control" id="nome" value="{{nome}}">

@@ -74,8 +74,6 @@
                         </div>
                     </div>
                     {{#each posts}}
-                        {{#dataValues}}
-                        
                             <div class="row">
                                 <div class="col">
                                     {{nome}}
@@ -89,18 +87,13 @@
                                 <div class="col">
                                     {{data_contato}}
                                 </div>
-                                <div class="col">
-                                    {{observacao}}
-                                </div>
-                                <div class="col">
-                                    <a href="/editar/{{id}}">Editar</a>
-                                </div>
+                                
                                  <div class="col">
+                                     <button type="button" class="btn btn-primary"><a href="/editar/{{id}}" style="color:inherit">Editar</a></button> 
                                      <button type="button" class="btn btn-primary"><a href="/excluir/{{id}}>" style="color:inherit">Excluir</a></button>
                                  </div>
                                
                             </div>
-                        {{/dataValues}}
                     {{/each}}    
                 
                 </div>
